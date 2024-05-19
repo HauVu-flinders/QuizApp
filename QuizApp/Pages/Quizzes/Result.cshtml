@@ -1,0 +1,19 @@
+﻿@page
+@model QuizApp.Pages.Quizzes.ResultModel
+@{
+    float.TryParse(Request.Query["result"], out float result);
+}
+<h1 class="text-center">Congratulation! You have successful completed the quiz.</h1>
+<div class="card text-center">
+    <div class="card-header">
+        Your score
+    </div>
+    <div class="card-body">
+        <h2 class="card-title">@result.ToString("0.00")%</h2>
+        <p class="card-text">@(result >= 60 ? "You've got a good mark" : "You should practice more")</p>
+        <a href="../Quizzes/ListQuizzes" class="btn btn-primary">Take more quizzes</a>
+    </div>
+    <div class="card-footer text-muted">
+        Quizzy learn English in an easy
+    </div>
+</div>
