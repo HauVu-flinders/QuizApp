@@ -1,22 +1,21 @@
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using QuizApp.Models;
+using QuizApp.Services;
 
 namespace QuizApp.Pages.Quizzes
 {
     public class ListQuizzesModel : PageModel
     {
-        private readonly QuizApp.Data.QuizAppDbContext _context;
-
-        public ListQuizzesModel(QuizApp.Data.QuizAppDbContext context)
+        private IQuizRepository _quizRepository;
+        public ListQuizzesModel(IQuizRepository quizRepository)
         {
-            _context = context;
+            _quizRepository = quizRepository;
         }
-
-        public IList<Quiz> Quiz { get;set; } = default!;
+        public IList<Quiz> Quizzes { get; set; }
 
         public async Task OnGetAsync()
         {
-            Quiz = await _context.Quizzes.ToListAsync();
+            Quizzes = _quizRepository.GetAll();
         }
     }
 }
