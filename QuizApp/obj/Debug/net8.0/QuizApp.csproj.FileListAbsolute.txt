@@ -261,3 +261,4 @@ D:\Hau\workspace\dotnet\QuizApp\QuizApp\obj\Debug\net8.0\refint\QuizApp.dll
 D:\Hau\workspace\dotnet\QuizApp\QuizApp\obj\Debug\net8.0\QuizApp.pdb
 D:\Hau\workspace\dotnet\QuizApp\QuizApp\obj\Debug\net8.0\QuizApp.genruntimeconfig.cache
 D:\Hau\workspace\dotnet\QuizApp\QuizApp\obj\Debug\net8.0\ref\QuizApp.dll
+D:\Hau\workspace\dotnet\QuizApp\QuizApp\obj\Debug\net8.0\QuizApp.sourcelink.json
